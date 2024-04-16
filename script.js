@@ -30,13 +30,11 @@ function playRound(playerSelection, computerChoice) {
         computerScore += 1;
         console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
 
-
     }
     else if (playerSelection === "paper" && computerChoice === "scissors") {
         console.log(`You Lose! ${computerChoice} beats ${playerSelection}`);
         computerScore += 1;
         console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
-
 
     }
     else if (playerSelection === "scissors" && computerChoice === "rock") {
@@ -44,18 +42,29 @@ function playRound(playerSelection, computerChoice) {
         computerScore += 1;
         console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
 
-
     }
     else {
         console.log(`You win! ${playerSelection} beats ${computerChoice}`);
         playerScore += 1;
         console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
 
-
     }
+
 }
 
 // playRound(playerSelection, computerChoice);
+
+function winner() {
+    if (playerScore > computerScore) {
+        console.log("You are the WINNER!!!!!!!")
+    }
+    else if (playerScore < computerScore) {
+        console.log("Computer WON!!!!")
+    }
+    else {
+        console.log("It's a TIE!!!")
+    }
+}
 
 function playGame() {
     // let playerScore = 0;
@@ -65,7 +74,8 @@ function playGame() {
         do {
             playerSelection = prompt("enter your choice: 'rock', 'paper', 'scissors' ").toLowerCase();
             if (!validInputs.includes(playerSelection)) {
-                prompt("Enter a valid option!!!")
+                alert("Enter a valid option!!!")
+
             }
 
         } while (!validInputs.includes(playerSelection))
@@ -73,8 +83,8 @@ function playGame() {
         computerChoice = getComputerChoice();
 
         playRound(playerSelection, computerChoice);
-
     }
+    winner();
 }
 
 
