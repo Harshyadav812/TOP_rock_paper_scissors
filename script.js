@@ -29,19 +29,11 @@ function playRound(playerSelection, computerChoice) {
     console.log(`TIE!! both chose ${computerChoice}`);
     console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
   }
-  else if (playerSelection === "rock" && computerChoice === "paper") {
-    console.log(`You Lose! ${computerChoice} beats ${playerSelection}`);
-    computerScore += 1;
-    console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
-
-  }
-  else if (playerSelection === "paper" && computerChoice === "scissors") {
-    console.log(`You Lose! ${computerChoice} beats ${playerSelection}`);
-    computerScore += 1;
-    console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
-
-  }
-  else if (playerSelection === "scissors" && computerChoice === "rock") {
+  else if (
+    (playerSelection === "rock" && computerChoice === "paper") ||
+    (playerSelection === "paper" && computerChoice === "scissors") ||
+    (playerSelection === "scissors" && computerChoice === "rock")
+  ) {
     console.log(`You Lose! ${computerChoice} beats ${playerSelection}`);
     computerScore += 1;
     console.log(`Player's Score: ${playerScore}  Computer's Score: ${computerScore}`);
