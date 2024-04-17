@@ -4,7 +4,6 @@ let computerScore = 0;
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
-  // console.log(randomNumber);
 
   switch (randomNumber) {
     case 1:
@@ -48,7 +47,6 @@ function playRound(playerSelection, computerChoice) {
 
 }
 
-// playRound(playerSelection, computerChoice);
 
 function winner() {
   if (playerScore > computerScore) {
