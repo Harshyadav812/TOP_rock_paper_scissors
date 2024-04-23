@@ -61,7 +61,6 @@ function winner() {
 }
 
 function playGame() {
-  // let playerScore = 0;
   let validInputs = ['rock', 'paper', 'scissors']
   let playerSelection;
   for (let i = 1; i <= 5; i++) {
