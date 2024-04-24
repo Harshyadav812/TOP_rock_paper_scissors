@@ -17,10 +17,7 @@ let computerScore = 0;
 
 btnContainer.addEventListener("click", (event) => {
   playerChoice = event.target.textContent.toLowerCase();
-  console.log(playerChoice);
   playRound(playerChoice);
-
-
 })
 
 function playRound(playerChoice) {
